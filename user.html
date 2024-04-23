@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
+    <title>Best Actor Contest</title>
+
+
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="assets/css/material-dashboard.css" rel="stylesheet" />
+    <style>
+        .buttons {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 20px;
+        }
+        
+        .buttons a {
+          text-decoration: none;
+        }
+    
+        .buttons button {
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+    
+        .buttons button:hover {
+          background-color: #0056b3;
+        }
+      </style>
+    <link rel="stylesheet" href="css/user.css">
+</head>
+
+<body>
+    <header class="fixed-header">
+        <style>
+          
+  
+  /* Header **/
+  header{
+        background:#35424a;
+        color:#ffffff;
+        padding-top:30px;
+        min-height:50px;
+        border-bottom:#e8491d 3px solid;
+        margin-bottom: 40px;
+        width: 100%;
+        
+        }
+        
+        header a{
+        color:#ffffff;
+        text-decoration:none;
+        text-transform: uppercase;
+        font-size:16px;
+        }
+        
+        header li{
+        float:left;
+        display:inline;
+        padding: 0 20px 0 20px;
+        }
+        
+        header #branding{
+        float:left;
+        }
+        
+        header #branding h1{
+        margin:0;
+        }
+        
+        header nav{
+        float:right;
+        margin-top:10px;
+        }
+        
+        header .highlight, header .current a{
+        color:#e8491d;
+        font-weight:bold;
+        }
+        
+        header a:hover{
+        color:#cccccc;
+        font-weight:bold;
+        }
+    
+        .fixed-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+         /* You can adjust the background color as needed */
+        z-index: 1000; /* Ensure the header has a higher z-index */
+    }
+    
+    main {
+        padding-top: 100px; /* Adjust padding top to accommodate the fixed header */
+    }
+    
+        
+    /*logo icon container*/
+    
+    .ourwork_html_icon {
+        width: 98px;
+        height: 98px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 8px;
+      }
+      
+      .ourwork_icon_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+      }
+      .dashboard-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.welcome-box {
+  position: relative;
+}
+
+.welcome-box img {
+  width: 600px;
+  height: 300px;
+  border-radius:10px;
+  margin-right: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  margin-right: 60px;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.overlay p {
+  font-size: 16px;
+  margin: 0;
+}
+
+
+
+  
+        </style>
+          <div class="ourwork_icon_container">
+            <img class="ourwork_html_icon" src="/block chain sample/css/assets/download (1).png" alt="html icon" />
+              <div>
+                  <h2 style="color: cyan; ">BLOCKCHAIN VOTING SYSTEM</h2>
+                  <h3>VOTER'S Dashboard</h3>
+                 
+            </div>
+      </header>
+    <!-- additional -->
+    <div class="wrapper " style="margin-top: 200px;">
+        <div class="sidebar" data-color="azure" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+          <!--
+            Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+    
+            Tip 2: you can also add an image using data-image tag
+        -->
+            <div class="sidebar-wrapper" style="margin-top: 200px;">
+              <ul class="nav" style="margin-top: 50px;">
+				<li class="nav-item">
+					<a class="nav-link" href="terms.html">
+					  <i class="material-icons">content_paste</i>
+					  <p>Information</p>
+					</a>
+				</li>
+        <li class="nav-item">
+          <a class="nav-link" href="president.html">
+            <i class="material-icons">how_to_vote</i>
+            <p>Vote</p>
+          </a>
+        </li>
+        
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="terms.html">
+                    <i class="material-icons">how_to_vote</i>
+                    <p>Rules & guidelines</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="result.html">
+                    <i class="material-icons">assessment</i>
+                    <p>Result</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/form">
+                      <i class="material-icons">settings</i>
+                      <p>settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/form">
+                      <i class="material-icons">palette</i>
+                      <p>Theme</p>
+                    </a>
+                  </li>
+                  
+                <li class="nav-item ">
+                  <a class="nav-link" href="login.html">
+                    <i class="material-icons">logout</i>
+                    <p>LogOut</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+            <div class="container-fluid">
+              <div class="navbar-wrapper">
+                <a class="navbar-brand" href="javascript:;"></a>
+              </div>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon icon-bar"></span>
+                <span class="navbar-toggler-icon icon-bar"></span>
+                <span class="navbar-toggler-icon icon-bar"></span>
+              </button>
+            </div>
+          </nav>
+		  
+		<div class="content" style=" margin-top: 20px !important;">
+			<div class="container"  style="width: 850px;">
+				<div id="currentPhase">
+
+				</div>
+				<div class="dashboard-top">
+          <div class="welcome-box">
+            <img src="css/assets/vote2.jpg" alt="Welcome Image">
+            <div class="overlay">
+              <p>Welcome, Voter! Thank you for participating in the election process.</p>
+            </div>
+          </div>
+        </div>
+        
+            
+                        <div class="buttons">  
+                            <a href="candidates.html"><button>Candidates</button></a>
+                           
+                            <a href="president.html"><button>Vote</button></a>
+                           
+					  </form>
+				</div>
+				<div class="content" style=" margin-top: 15px !important;margin-top: 10px;">
+          <div class="container" style="width: 900px;margin-right: 2%;margin-top:10px;">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header card-header-info">
+                    <h4 class="card-title">User Manual</h4>
+                  </div>
+                  <div class="card-body">
+                    <h4>Welcome </h4>
+                    <h5>These are few Guidelines for user : </h5>
+                    <h5>1. Voter  Registration</h5>
+  
+  <ul>
+  <li>For casting the vote user needs to first register himself. For this registration purpose , the user will be provided a voter registration form on this website.</li>
+  <li>The voter can only register in the registration phase. After the registration phase is over the user can not register and thus will not be able to vote.</li>
+  <li>For registration , the user will have to enter his Aadhar card number and the account address which the user will be using for  voting purpose.</li>
+  <li>At the first stage the user’s age will be checked. If the user is  18 or above  18 years of age then only he is eligible to vote.</li>
+  <li>The second stage is OTP verification. This stage is required to validate the voter itself. After entering the aadhar number and successful age verification.</li>
+  <li>After entering correct OTP user will get successfully registered.</li>
+  </ul>
+  
+  <h5>2.Voting Process</h5>
+  <ul >
+  <li>Overall , voting process is divided into three phases. All of which will be initialized and terminated by the admin. User have to participate in the process according to current phase. </li>
+  </ul>
+  <ol >
+  <li><strong>Registration Phase</strong>:  During this phase the registration of the users (which are going to cast the vote) will be carried out. </li>
+  <li><strong>Voting Phase</strong>: After initialization of voting phase from the admin, user can cast the vote in voting section.The casting of vote can be simply done by clicking on “VOTE” button, after which transaction will be initiated and after confirming transaction the vote will get successfully casted. After voting phase gets over user will not be able to cast vote.</li>
+  <li><strong> Result Phase</strong>: This is the final stage of whole voting process during which the results of election will be displayed at “Result” section.</li>
+  </ol>
+  
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        
+        <!-- End Navbar -->
+    </div>
+    </div>
+        
+                <div class='modal-footer'>
+                  <button type='button' class='btn btn-info' data-dismiss='modal'>Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  
+</div>
+
+
+</div>
+</div>
+  
+
+  
+  <!-- End Navbar -->
+</div>
+</div>
+
+				
+				
+												
+          
+        
+        
+
+    
+   
+
+
+    
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

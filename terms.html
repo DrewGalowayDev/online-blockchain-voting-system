@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>terms & conditions</title>
+<style>
+    body {
+    background-color:hsl(0, 0%, 3%);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+
+    .terms-container {
+    font-family: 'Arial', sans-serif;
+    top: 200px;
+    margin-bottom: 100px;
+    max-width: 800px;
+    margin-left:8%;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+li {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #3498db;
+}
+footer {
+    background-color: #094581;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+   
+    width: 100%;
+}
+.footer-text {
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: hsl(0, 33%, 95%);
+}
+
+.footer-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: inline-block;
+    animation: marqueeLink 15s linear infinite;
+}
+
+@keyframes marqueeLink {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+.popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #6485f1;
+            box-shadow: 0 0 10px rgba(236, 83, 83, 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        #agree {
+            margin-bottom: 10px;
+        }
+
+/* Optional: Add more styles for specific elements if needed */
+
+</style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Online Voting System</h1>
+        <p class="header-subtitle">Powered by Blockchain Technology</p>
+    </header>
+    <div class="terms-container">
+        <div class="heading">Terms and Conditions - Online Voting Blockchain System</div>
+    
+        <p>Welcome to our secure online voting system powered by blockchain technology. By participating in the voting process, you agree to the following terms and conditions:</p>
+    
+        <ol>
+            <li><strong>Blockchain Security:</strong> Our voting system utilizes blockchain technology to ensure the security, transparency, and integrity of the voting process. Each vote is securely recorded on the blockchain, providing an immutable and tamper-proof record.</li>
+    
+            <li><strong>Wallet and Identity:</strong> Participants must use a valid blockchain wallet for voting. The identity verification process ensures that each participant is a unique and eligible voter.</li>
+    
+            <li><strong>Decentralized Verification:</strong> The blockchain network, consisting of nodes distributed globally, independently verifies and validates each vote. This decentralized approach enhances the trustworthiness of the voting results.</li>
+    
+            <li><strong>Smart Contracts:</strong> Smart contracts govern the execution of the voting process, ensuring that the rules and conditions are transparent and automatically enforced. Participants agree to abide by the smart contract rules.</li>
+    
+            <li><strong>Immutable Record:</strong> Once a vote is recorded on the blockchain, it becomes an immutable part of the ledger. Changes or attempts to tamper with the voting data are impossible, ensuring the integrity of the election results.</li>
+    
+            <li><strong>Secure Access:</strong> Participants are responsible for maintaining the security of their blockchain wallet and access credentials. Any unauthorized access or use of another participant's credentials is strictly prohibited.</li>
+    
+            <li><strong>Privacy:</strong> The voting system respects the privacy of participants. Voting choices are encrypted and stored anonymously on the blockchain, ensuring confidentiality.</li>
+    
+            <li><strong>Results and Audit:</strong> The final voting results, along with relevant details, will be made publicly accessible on the blockchain for auditing purposes. The transparency of the blockchain allows for independent verification of the election outcome.</li>
+    
+            <li><strong>Legal Compliance:</strong> Participants must comply with all relevant legal requirements and regulations governing online voting in their jurisdiction. The voting system is designed to facilitate legal and secure elections.</li>
+    
+            <li><strong>Changes to Terms:</strong> The online voting system reserves the right to update or modify these terms and conditions at any time. Participants will be notified of any changes.</li>
+        </ol>
+    
+        <p>By participating in the online voting process, you acknowledge and agree to abide by these terms and conditions.</p>
+    </div>
+
+    <label for="agree">
+        <h4 style="color: #ecf0f1;">I agree to the terms and conditions</h4>
+    </label>
+    <input type="checkbox" id="agree"><br>
+    
+    <button type="button" onclick="register()">Register</button><br>
+
+    <div id="popup" class="popup">
+        <p>Successfully registered!</p>
+        <button onclick="redirectToLogin()">Go to Login</button>
+    </div>
+
+    <script>
+        function register() {
+            var agreeCheckbox = document.getElementById('agree');
+            if (agreeCheckbox.checked) {
+                // Simulate registration success
+                displayPopup();
+            } else {
+                alert('Please agree to the terms and conditions before registering.');
+            }
+        }
+
+        function displayPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+        }
+
+        function redirectToLogin() {
+            // Redirect to the login page, you can replace '#' with your actual login page URL
+            window.location.href = 'login.html';
+        }
+    </script>
+    <footer>
+        <marquee behavior="scroll" direction="left">
+            <p class="footer-text">© 2024 Online Voting System. All rights reserved. | <a href="#" class="footer-link">Privacy Policy</a></p>
+        </marquee>
+    </footer>
+</body>
+</html>

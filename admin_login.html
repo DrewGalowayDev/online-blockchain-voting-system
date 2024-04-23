@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADMIN Login Form</title>
+	<link rel="stylesheet" href="css/adminstyle.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<style>
+/* Header **/
+header{
+        background:#35424a;
+        color:#ffffff;
+        padding-top:30px;
+        min-height:50px;
+        border-bottom:#e8491d 3px solid;
+        margin-bottom: 40px;
+        width: 100%;
+        
+        }
+        
+        header a{
+        color:#ffffff;
+        text-decoration:none;
+        text-transform: uppercase;
+        font-size:16px;
+        }
+        
+        header li{
+        float:left;
+        display:inline;
+        padding: 0 20px 0 20px;
+        }
+        
+        header #branding{
+        float:left;
+        }
+        
+        header #branding h1{
+        margin:0;
+        }
+        
+        header nav{
+        float:right;
+        margin-top:10px;
+        }
+        
+        header .highlight, header .current a{
+        color:#e8491d;
+        font-weight:bold;
+        }
+        
+        header a:hover{
+        color:#cccccc;
+        font-weight:bold;
+        }
+    
+        .fixed-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+         /* You can adjust the background color as needed */
+        z-index: 1000; /* Ensure the header has a higher z-index */
+    }
+    
+    main {
+        padding-top: 100px; /* Adjust padding top to accommodate the fixed header */
+    }
+	/*logo icon container*/
+
+.ourwork_html_icon {
+    width: 98px;
+    height: 98px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  
+  .ourwork_icon_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
+
+</style>
+<body>
+	<header class="fixed-header">
+        <style>
+          
+  
+  
+        </style>
+          <div class="ourwork_icon_container">
+            <img class="ourwork_html_icon" src="/block chain sample/css/assets/download (1).png" alt="html icon" />
+              <div>
+
+                  <h2 style="color: cyan; ">BLOCKCHAIN VOTING SYSTEM</h2>
+                  <h1 style="text-align: center;color: #fcf5f5;">PRESIDENT</h1>
+            </div>
+      </header>
+	<div class="center">
+	<div class="header">Admin Login Form</div>	
+
+
+	<form  method="post" action="/adlogin">
+		<input type="text" placeholder="Email or Username" name="email_address" required/>
+		<i class="far fa-envelope"></i>
+		<input id="pswrd" type="password" placeholder="Password" name="password" required/>
+		<i class="fas fa-lock" onclick="show()"></i>
+		
+		<input type="submit" value="Login">
+		<a href="admin dashboard.html" class="login-button">Login</a>
+		<a href="">Forgot Password?</a>
+	</form>	
+	</div>
+
+	 <script>
+		function show(){
+			var pswrd = document.getElementById('pswrd');
+			var icon = document.querySelector('.fas');
+			if (pswrd.type === "password") {
+				pswrd.type = "text";
+				pswrd.style.marginTop = "20px";
+				icon.style.color = "#7f2092";
+			}else{
+				pswrd.type = "password";
+				icon.style.color = "grey";
+			}
+		}
+	</script>
+	
+</body>
+</html>

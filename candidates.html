@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vote</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+      /* Header **/
+      header{
+              background:#35424a;
+              color:#ffffff;
+              padding-top:30px;
+              min-height:50px;
+              border-bottom:#e8491d 3px solid;
+              margin-bottom: 40px;
+              width: 100%;
+              
+              }
+              .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-link {
+  margin-right: auto; /* Push the link to the far left */
+}
+
+              
+              header a{
+              color:#ffffff;
+              text-decoration:none;
+              text-transform: uppercase;
+              font-size:16px;
+              }
+              
+              header li{
+              float:left;
+              display:inline;
+              padding: 0 20px 0 20px;
+              }
+              
+              header #branding{
+              float:left;
+              }
+              
+              header #branding h1{
+              margin:0;
+              }
+              
+              header nav{
+              float:right;
+              margin-top:10px;
+              }
+              
+              header .highlight, header .current a{
+              color:#e8491d;
+              font-weight:bold;
+              }
+              
+              header a:hover{
+              color:#cccccc;
+              font-weight:bold;
+              }
+          
+              .fixed-header {
+              position: fixed;
+              top: 0;
+              width: 100%;
+               /* You can adjust the background color as needed */
+              z-index: 1000; /* Ensure the header has a higher z-index */
+          }
+          
+          main {
+              padding-top: 100px; /* Adjust padding top to accommodate the fixed header */
+          }
+        /*logo icon container*/
+      
+      .ourwork_html_icon {
+          width: 98px;
+          height: 98px;
+          background-color: white;
+          border-radius: 50%;
+          padding: 8px;
+        }
+        
+        .ourwork_icon_container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 25px;
+        }
+      
+      </style>
+    <style>
+        .button {
+            margin-left: 40%;
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: hsl(0, 93%, 51%);
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+        }
+    
+        .button:hover {
+          background-color: #21e7f5;
+        }
+      </style>
+</head>
+<body>
+  <header class="fixed-header">
+    <style>
+      
+
+
+    </style>
+      <div class="ourwork_icon_container">
+        <img class="ourwork_html_icon" src="/block chain sample/css/assets/download (1).png" alt="html icon" />
+          <div>
+
+              <h2 style="color: cyan; ">BLOCKCHAIN VOTING SYSTEM</h2>
+              <h1 style="text-align: center;color: #fcf5f5;">CANDIDATES</h1>
+        </div>
+        <div class="header" style="text-align: end;">
+          <a href="user.html" style="text-align: end;"> Dashboard</a>
+        </div>
+        
+  </header>
+    <br><br>
+    <main>  
+
+
+        <div class="content">
+    
+            <div class="slides">
+    
+                <input class="input" type="radio" name="slide" id="slide1" checked>
+                <input class="input" type="radio" name="slide" id="slide2">
+                <input class="input" type="radio" name="slide" id="slide3">
+                <input class="input" type="radio" name="slide" id="slide4">
+                <input class="input" type="radio" name="slide" id="slide5">
+    
+    
+                <!-- ... Your existing HTML ... -->
+    
+                <div class="slide s1">
+                  <div class="text-overlay common-text-overlay" id="textOverlay1">
+                    <h2>"Immerse yourself in the secure and transparent world of our online blockchain voting system, ensuring an efficient and trustworthy election process that guarantees the safety of your vote."</h2>
+                  </div>
+                  <img src="/block chain sample/css/assets/drew3.jpg" alt="">
+                </div>
+                
+                <div class="slide s2">
+                  <div class="text-overlay common-text-overlay" id="textOverlay2">
+                    <h2>"Participate in our democratic process with ease on our user-friendly and modern platform, making the voting experience not only convenient and reliable but also empowering for every voter."</h2>
+                  </div>
+                  <img src="/block chain sample/css/assets/vote2.jpg" alt="">
+                </div>
+                
+                <div class="slide s3">
+                  <div class="text-overlay common-text-overlay" id="textOverlay3">
+                    <h2>"Embark on an innovative and privacy-focused journey as you engage in a seamless voting experience. Our inclusive approach empowers each voter to play a crucial role in shaping the future."</h2>
+                  </div>
+                  <img src="/block chain sample/css/assets/vote4.jpg" alt="">
+                </div>
+                
+                <div class="slide s4">
+                  <div class="text-overlay common-text-overlay" id="textOverlay4">
+                    <h2>"Experience a swift, democratic, and cutting-edge online blockchain voting system that is responsive, reliable, and designed to embrace the principles of a democratic society, ensuring the voice of every citizen is heard."</h2>
+                  </div>
+                  <img src="/block chain sample/css/assets/drew3.jpg" alt="">
+                </div>
+                
+                <div class="slide s5">
+                  <div class="text-overlay common-text-overlay" id="textOverlay5">
+                    <h2>"Engage in a streamlined and accessible voting experience that goes beyond verification – it is a platform for empowerment and trust, designed to ensure the democratic process is accessible to all citizens."</h2>
+                  </div>
+                  <img src="/block chain sample/css/assets/vote5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <div class="navigation">
+    
+            <label class="bar" for="slide1"></label>
+            <label class="bar" for="slide2"></label>
+            <label class="bar" for="slide3"></label>
+            <label class="bar" for="slide4"></label>
+            <label class="bar" for="slide5"></label>
+    
+        </div>
+    
+    
+        <script>
+          let contador = 1;
+    
+    setInterval( function(){
+        document.getElementById('slide' + contador).checked = true;
+        contador++;
+    
+        if(counter > 5 ) {
+            contador = 1;
+        }
+    }, 3000 );
+    
+    
+    function hideAllTextOverlays() {
+      document.querySelectorAll('.common-text-overlay').forEach(function (textOverlay) {
+        textOverlay.style.display = 'none';
+      });
+    }
+    
+    document.querySelectorAll('.input').forEach(function (input, index) {
+      input.addEventListener('change', function () {
+        hideAllTextOverlays();
+        document.getElementById('textOverlay' + (index + 1)).style.display = 'block';
+      });
+    });
+    
+    $('#modal').click(function() {
+  $(this).addClass('open');
+});
+
+$('.overlay').click(function() {
+  $('#modal').removeClass('open');
+});
+// hide the h2 elements initially
+$('.slide-title').hide();
+
+// show the h2 element for the current slide
+$('#slides-aux .slide[data-index="' + currentIndex + '"] .slide-title').show();
+        </script>
+    <!--the container showing the profile details of the candidates-->
+    <div class="container10" id="services-section">
+             <h1 style="text-align: center;color: rgb(18, 184, 175);">CANDIDATES PROFILES</h1>
+    
+           
+    <br>
+            <h2 style="color: antiquewhite;text-align: center;"> PRESIDENT</h2>
+           <br>
+            <div class="candidates-container" style="background-color: magenta;">
+                <div class="candidate">
+                    <img src="candidate1.jpg" alt="Candidate 1">
+                    <h2>Drew galloway</h2>
+                    <p>Age: 35</p>
+                    <p>Education: Bachelor's in Political Science</p>
+                    <p>Experience: 8 years in public service</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate2.jpg" alt="Candidate 2">
+                    <h2>levi</h2>
+                    <p>Age: 40</p>
+                    <p>Education: Master's in Economics</p>
+                    <p>Experience: 10 years in finance</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate3.jpg" alt="Candidate 3">
+                    <h2>samson</h2>
+                    <p>Age: 38</p>
+                    <p>Education: Doctorate in Law</p>
+                    <p>Experience: 12 years as a lawyer</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate4.jpg" alt="Candidate 4">
+                    <h2>peter</h2>
+                    <p>Age: 45</p>
+                    <p>Education: Bachelor's in Business Administration</p>
+                    <p>Experience: 15 years in business management</p>
+                </div>
+            </div>
+            <!--the container showing the  congres amn details-->
+            <button class="button" onclick="window.location.href='president.html'">vote for PRESIDENT</button>
+            <br><br><br>
+            <h2 style="color: antiquewhite;text-align: center;"> CONGRESS MAN</h2>
+            <br>
+        <br>
+            <div class="candidates-container" style="background-color: goldenrod;">
+                <div class="candidate">
+                    <img src="candidate1.jpg" alt="Candidate 1">
+                    <h2>ROBINSON</h2>
+                    <p>Age: 30</p>
+                    <p>Education: Bachelor's in software engineering</p>
+                    <p>Experience: 8 years in amazon</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate2.jpg" alt="Candidate 2">
+                    <h2>crusoe</h2>
+                    <p>Age: 40</p>
+                    <p>Education: Master's in medicine</p>
+                    <p>Experience: 10 years in surgery</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate3.jpg" alt="Candidate 3">
+                    <h2>njoroge</h2>
+                    <p>Age: 38</p>
+                    <p>Education: Doctorate in Law</p>
+                    <p>Experience: 10 years as a judge</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate4.jpg" alt="Candidate 4">
+                    <h2>ateya</h2>
+                    <p>Age: 47</p>
+                    <p>Education: Bachelor's in bs Economics</p>
+                    <p>Experience: 10 years in business management</p>
+                </div>
+            </div>
+            <button class="button" onclick="window.location.href='congress.html'">vote for CONGRESSMAN</button>
+        <!--the container showing the  senator details-->
+        <br><br><br>
+            <h2 style="color: antiquewhite;text-align: center;"> SENATOR</h2>
+            <br>
+        <br>
+            <div class="candidates-container" style="background-color: forestgreen;">
+                <div class="candidate">
+                    <img src="candidate1.jpg" alt="Candidate 1">
+                    <h2>John walker</h2>
+                    <p>Age: 35</p>
+                    <p>Education: Bachelor's in agricultural  engineering</p>
+                    <p>Experience: 8 years in agricultural department</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate2.jpg" alt="Candidate 2">
+                    <h2>william ruto</h2>
+                    <p>Age: 40</p>
+                    <p>Education: Master's in electronic engineering</p>
+                    <p>Experience: 10 years in elctronic Experience</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate3.jpg" alt="Candidate 3">
+                    <h2>Uhuru kenyatta</h2>
+                    <p>Age: 38</p>
+                    <p>Education: Doctorate in philosopher</p>
+                    <p>Experience: 12 years as a philosopher at edinberg university</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate4.jpg" alt="Candidate 4">
+                    <h2>Raila odinga</h2>
+                    <p>Age: 45</p>
+                    <p>Education: Bachelor's in political science</p>
+                    <p>Experience: 15 years in  politics review and analysis</p>
+                </div>
+            </div>
+            <button class="button" onclick="window.location.href='senator.html'">vote for SENATOR</button>
+            <br><br><br>
+            <h2 style="color: antiquewhite;text-align: center;"> SCHOOL SPEAKER</h2>
+            <br>
+        <br>
+            <div class="candidates-container" style="background-color:teal;">
+                <div class="candidate">
+                    <img src="candidate1.jpg" alt="Candidate 1">
+                    <h2>BRITISH BULLDOG</h2>
+                    <p>Age: 35</p>
+                    <p>Education: Bachelor's in agricultural  engineering</p>
+                    <p>Experience: 8 years in agricultural department</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate2.jpg" alt="Candidate 2">
+                    <h2>RKO</h2>
+                    <p>Age: 40</p>
+                    <p>Education: Master's in electronic engineering</p>
+                    <p>Experience: 10 years in elctronic Experience</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate3.jpg" alt="Candidate 3">
+                    <h2>CODY RHODES</h2>
+                    <p>Age: 38</p>
+                    <p>Education: Doctorate in philosopher</p>
+                    <p>Experience: 12 years as a philosopher at edinberg university</p>
+                </div>
+        
+                <div class="candidate">
+                    <img src="candidate4.jpg" alt="Candidate 4">
+                    <h2>KEVIN OWENS</h2>
+                    <p>Age: 45</p>
+                    <p>Education: Bachelor's in political science</p>
+                    <p>Experience: 15 years in  politics review and analysis</p>
+                </div>
+            </div>
+            <button class="button" onclick="window.location.href='speaker.html'">vote for SPEAKER</button>
+    
+    
+    </div>
+</main>
+</body>
+</html>

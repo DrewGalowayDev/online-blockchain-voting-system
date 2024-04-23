@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    
+
+    <link rel="stylesheet" href="./css/sign up.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>signup</title>
+</head>
+<header class="fixed-header">
+      
+    <div class="ourwork_icon_container">
+        <img class="ourwork_html_icon" src="./css/assets/download (1).png" alt="html icon" />
+        <div>
+            <h1 style="color: cyan; ">BLOCKCHAIN VOTING SYSTEM</h1>
+      </div>
+</header>
+
+
+<body style="background-color: #0d3f6b;">
+    <main> 
+        <br><br><br><br> 
+        
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col" id="col1">
+<br><br><br><br>
+                <img src="OTP security.png" alt="">
+            <!--verification-->
+    
+        <div class="form-container">
+            <h3 style="color: cyan; margin-bottom: 4%; border-left: 5px solid #fff; padding-left: 5%;">VOTER ELIGIBILITY
+                VERIFICATION</h3>
+
+            <h6 style="color: cyan;">Verify your eligibility to vote.</h6>
+
+            <!-- Voter ID Number -->
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-address-card" aria-hidden="true"
+                        style="color:cyan;"></i></span>
+                <input type="text" class="form-control" placeholder="Voter ID Number" aria-describedby="basic-addon1">
+            </div>
+
+            <!-- Upload ID Card -->
+            <div class="file-input-group">
+                <div class="file-input-label">Upload National Voter ID Card photos:</div>
+                <input type="file" id="idCardInput" accept="image/*" />
+                <label for="idCardInput" class="file-input-btn">Choose File</label>
+            </div>
+
+            <!-- Eligibility Verification Result -->
+            <div class="verification-result" id="verificationResult">Verification Result: <span
+                    class="valid">Valid</span></div>
+<br>
+            <!-- Verify Eligibility Button -->
+            <button type="button" class="btn btn-primary" onclick="verifyEligibility()">Verify Eligibility</button>
+        </div>
+
+ 
+
+
+
+<!--user name-->
+            </div>
+            <div class="col">
+                <h3 style="color: cyan; margin-bottom:4%;   border-left: 5px solid #fff; padding-left:5%;">CREATE VOTING ACCOUNT
+                </h3>
+                  <br>
+                <h6 style="color: cyan;">Get started with us,voting is your priority</h6>
+                  <br>
+                <h5 style="color: cyan;padding-top: 1%;">Not your first time?<a href="login.html">Login</a></h5>    
+                  <br>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1" style="background: transparent;"><i
+                            class="fa fa-address-book" aria-hidden="true" style="color:cyan;"></i></span>
+                    <input type="text" class="form-control" placeholder="full Usernames" aria-label="Full name"
+                        aria-describedby="basic-addon1" style="background: transparent;">
+                </div>
+
+<!--date of birth-->
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1" style="background: transparent;">
+        <i class="fa fa-calendar" aria-hidden="true" style="color:cyan;"></i>
+    </span>
+    <input type="date" class="form-control" placeholder="Date of Birth" aria-label="Date of Birth"
+           aria-describedby="basic-addon1" style="background: transparent;">
+</div>
+
+    <!-- Contact Information Field -->
+   
+
+    <!-- Email Field -->
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" style="background: transparent;"><i
+                class="fa fa-envelope" aria-hidden="true" style="color:cyan;"></i></span>
+        <input type="email" class="form-control"  placeholder="Email: example@example.com"
+            aria-describedby="basic-addon1" style="background: transparent; ">
+    </div>
+
+<!--password field-->
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1" style="background: transparent;"><i
+            class="fa fa-key" aria-hidden="true" style="color:cyan;"></i></span>
+    <input type="password" class="form-control" placeholder="password" aria-label="password"
+        aria-describedby="basic-addon1" style="background: transparent;">
+</div>
+
+
+    <!-- Phone Field -->
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" style="background: transparent;"><i
+                class="fa fa-phone" aria-hidden="true" style="color:cyan;"></i></span>
+        <input type="tel" class="form-control" placeholder="Phone : +1 (123) 456-7890"
+            aria-describedby="basic-addon1" style="background: transparent;">
+    </div>
+    <!-- Add more contact information as needed -->
+
+
+
+
+   
+
+<!--address-->
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1" style="background: transparent;">
+        <i class="fa fa-map-marker" aria-hidden="true" style="color:cyan;"></i>
+    </span>
+    <!-- County -->
+    <select class="form-select" aria-label="Select school">
+        <option selected disabled style="color: #f6f5f9;">school</option>
+        <option value="school1">law</option>
+        <option value="school2">medicine</option>
+        <option value="school3">IT</option>
+        <!-- Add more counties as needed -->
+    </select>
+    <!-- Subcounty -->
+    <select class="form-select" aria-label="Select department">
+        <option selected disabled style="color: #f5f4f7;">department</option>
+        <option value="department 1">IT</option>
+        <option value="department2">SOEN</option>
+        <option value="department3">COMP SCIE</option>
+        <!-- Add more subcounties as needed -->
+    </select>
+    <!-- Location -->
+    <select class="form-select" aria-label="Select year">
+        <option selected disabled style="color: #d5d4d7;">year</option>
+        <option value="YEAR1"></option>
+        <option value="YEAR2">YEAR2</option>
+        <option value="YEAR3">YEAR3</option>
+        <option value="YEAR4">YEAR4</option>
+        <!-- Add more locations as needed -->
+    </select>
+    <!-- Sublocation -->
+    <select class="form-select" aria-label="Select Sublocation">
+        <option selected disabled style="color: #d8d4d4;">Select Sublocation</option>
+        <option value="sublocation1">course 1</option>
+        <option value="sublocation2">course 2</option>
+        <option value="sublocation3">course 3</option>
+        <!-- Add more sublocations as needed -->
+    </select>
+    <!-- Address Box Number -->
+    <input type="text" class="form-control" placeholder="Address Box Number" aria-label="Address Box Number"
+        aria-describedby="basic-addon1" style="background: transparent;">
+</div>
+<!--id details-->
+<br><br>
+    <div class="form-container">
+        <h3 style="color: cyan; margin-bottom: 4%; border-left: 5px solid #fff; padding-left: 5%;"> UPLOAD SCHOOL ID  & PERSONAL PHOTO
+        </h3>
+        <h6 style="color: cyan;">Please provide school ID /photo.</h6>
+
+       <!-- ID Details -->
+ <div class="input-group">
+    <span class="input-group-text" id="basic-addon1"><i class="fa fa-address-card" aria-hidden="true"
+            style="color:cyan;"></i></span>
+    <input type="text" class="form-control" placeholder="Reg No" aria-describedby="basic-addon1">
+</div>
+
+<!-- Personal Passport Photo -->
+<div class="file-input-group">
+    <div class="file-input-label">Upload school ID & personal photos:</div>
+    <input type="file" id="photoInput" accept="image/*" />
+    <label for="photoInput" class="file-input-btn">Choose File</label>
+</div>
+
+<!-- Personal Passport Photo -->
+<div class="file-input-group">
+    <div class="file-input-label">Upload passport photos:</div>
+    <input type="file" id="photoInput" accept="image/*" />
+    <label for="photoInput" class="file-input-btn">Choose File</label>
+</div>
+
+<!-- Submit Button -->
+<button type="button" class="btn btn-primary">Submit</button>
+</div>
+
+<!--user name-->
+
+                      
+        </div>
+
+    </div>
+    <a href="terms.html" id="signupButton">Register</a>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+        <script>
+            function verifyEligibility() {
+                // Dummy verification logic
+                var isValid = Math.random() < 0.5; // Simulating random verification result
+    
+                var resultElement = document.getElementById("verificationResult");
+                resultElement.classList.remove("valid", "invalid");
+    
+                if (isValid) {
+                    resultElement.classList.add("valid");
+                    resultElement.textContent = "Verification Result: Valid";
+                } else {
+                    resultElement.classList.add("invalid");
+                    resultElement.textContent = "Verification Result: Invalid";
+                }
+            }
+            function register() {
+            var agreeCheckbox = document.getElementById('agree');
+            if (agreeCheckbox.checked) {
+                // Simulate registration success
+                alert('Successfully registered!');
+            } else {
+                alert('Please agree to the terms and conditions before registering.');
+            }
+        }
+        </script>
+
+
+
+        <footer>
+            <div id="quick-links">
+                <div id="brand">
+                    <h3>VOTECHAIN</h3>
+                    <p>
+            VOTE FOR FUTURE LEADERSHIP!!!<br />
+
+                    </p>
+                    
+                </div>
+                <div id="footer-links">
+                    <div>
+                        <h3>Community</h3>
+                        <ul class="footer-list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Work</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Knowledge Base</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Contact Us</h3>
+                        <ul class="footer-list">
+                            <li><a href="#">info@VOTECHAIN.com</a></li>
+                        </ul>
+                    </div>
+                    <div id="updates">
+                        <h3>Stay up to date</h3>
+                        <p>Get informed of our upcoming events</p>
+                        <a href="./signup.html">
+                            <button>Join us</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <marquee behavior="" direction="right">All rights reserved, Copyright &copy  BLOCKCHAIN VOTING site Copyright  2024 </marquee>                       
+          </footer>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting System</title>
+  <style>
+
+
+    /* Header **/
+    header{
+        background:#35424a;
+        color:#ffffff;
+        padding-top:30px;
+        min-height:50px;
+        border-bottom:#e8491d 3px solid;
+        margin-bottom: 40px;
+        width: 100%;
+        
+        }
+        
+        header a{
+        color:#ffffff;
+        text-decoration:none;
+        text-transform: uppercase;
+        font-size:16px;
+        }
+        
+        header li{
+        float:left;
+        display:inline;
+        padding: 0 20px 0 20px;
+        }
+        
+        header #branding{
+        float:left;
+        }
+        
+        header #branding h1{
+        margin:0;
+        }
+        
+        header nav{
+        float:right;
+        margin-top:10px;
+        }
+        
+        header .highlight, header .current a{
+        color:#e8491d;
+        font-weight:bold;
+        }
+        
+        header a:hover{
+        color:#cccccc;
+        font-weight:bold;
+        }
+    
+        .fixed-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+         /* You can adjust the background color as needed */
+        z-index: 1000; /* Ensure the header has a higher z-index */
+    }
+    
+    main {
+        padding-top: 100px; /* Adjust padding top to accommodate the fixed header */
+    }
+    
+        
+    /*logo icon container*/
+    
+    .ourwork_html_icon {
+        width: 98px;
+        height: 98px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 8px;
+      }
+      
+      .ourwork_icon_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+      }
+      /*******************details for the president styling sheet*/
+      
+      
+        body {
+          font-family: Arial, sans-serif;
+        }
+        .candidates-container {
+          display: flex;
+          margin-top: 200px;
+          background-color: rgb(228, 162, 160);
+        }
+        .candidate {
+          border: 3px solid navy;
+          border-radius: 5px;
+          padding: 10px;
+          margin: 10px;
+          width: 200px;
+          display: inline-block;
+          text-align: center;
+        }
+        .candidate img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          display: block;
+          margin: 0 auto 10px;
+          animation-name: zoomIn;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+        .vote-button {
+          display: block;
+          margin-top: 10px;
+          padding: 5px 10px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .vote-button:hover{
+          background-color: #e76e0c; 
+    
+    
+        }
+        .vote-button {
+          display: block;
+          margin-top: 10px;
+          padding: 5px 10px;
+          background-color: #007bff; /* Default button color */
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .vote-button.clicked {
+          background-color: #28a745; /* Color for clicked button */
+        }
+        .disabled {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+        @keyframes zoomIn {
+          from {
+            transform: scale(0);
+          }
+          to {
+            transform: scale(1);
+          }
+        }
+        footer {
+      background-color: #1a1b1b;
+      padding: 20px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: hsl(0, 14%, 99%);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+      </style>
+</head>
+<body>
+
+    <header class="fixed-header">
+        <style>
+          
+  
+  
+        </style>
+          <div class="ourwork_icon_container">
+              <img class="ourwork_html_icon" src="/block chain sample/css/assets/download (1).png" alt="html icon" />
+              <div>
+                  <h2 style="color: cyan; ">BLOCKCHAIN VOTING SYSTEM</h2>
+                  <h1 style="text-align: center;color: #fcf5f5;">SPEAKER</h1>
+            </div>
+      </header>
+  <div class="candidates-container" id="candidates">
+    <div class="candidate" id="senator0">
+      <img src="" alt="Senator">
+      <h3>Name</h3>
+      <p>Details</p>
+      <button class="vote-button" onclick="vote('Senator', 0, this)">Vote</button>
+    </div>
+    <div class="candidate" id="senator1">
+      <img src="" alt="Senator">
+      <h3>Name</h3>
+      <p>Details</p>
+      <button class="vote-button" onclick="vote('Senator', 1, this)">Vote</button>
+    </div>
+    <div class="candidate" id="senator2">
+      <img src="" alt="Senator">
+      <h3>Name</h3>
+      <p>Details</p>
+      <button class="vote-button" onclick="vote('Senator', 2, this)">Vote</button>
+    </div>
+    <div class="candidate" id="senator3">
+      <img src="" alt="Senator">
+      <h3>Name</h3>
+      <p>Details</p>
+      <button class="vote-button" onclick="vote('Senator', 3, this)">Vote</button>
+    </div>
+  </div>
+
+  <script>
+    // Sample data for candidates
+    const candidatesData = {
+      Senator: {
+        names: ["Robert Thompson", "Lisa White", "Christopher Harris", "Maria Rodriguez"],
+        details: ["Party: Democrat", "Party: Republican", "Party: Independent", "Party: Green"],
+        voted: [false, false, false, false]
+      }
+    };
+
+    // Function to generate random index
+    function getRandomIndex(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    // Function to update candidate details
+    function updateCandidateDetails(position, index) {
+      const candidateElement = document.getElementById(`${position.toLowerCase()}${index}`);
+      const name = candidatesData[position].names[index];
+      const details = candidatesData[position].details[index];
+      const imageElement = candidateElement.querySelector("img");
+
+      // Set up the animation effect for images
+      imageElement.style.animationName = "zoomIn";
+      imageElement.style.animationDuration = "0.5s";
+      imageElement.style.animationFillMode = "forwards";
+
+      // Update candidate information
+      imageElement.src = `https://randomuser.me/api/portraits/men/${index}.jpg`; // Random image URL for men candidates
+      candidateElement.querySelector("h3").innerText = name;
+      candidateElement.querySelector("p").innerText = details;
+    }
+
+    // Update details for senator position
+    for (let i = 0; i < 4; i++) {
+      updateCandidateDetails('Senator', i);
+    }
+
+    // Function to handle voting
+    function vote(position, index, button) {
+      if (!candidatesData[position].voted.some(v => v)) {
+        alert(`You voted for ${candidatesData[position].names[index]}`);
+        button.disabled = true;
+        button.classList.add('disabled');
+        button.classList.add('clicked'); // Add clicked class to change button color
+        candidatesData[position].voted[index] = true;
+        // You can implement your voting logic here
+      } else {
+        alert(`You have already voted for a candidate.`);
+      }
+    }
+  </script>
+  <footer>
+    <h4 style="color: #cccccc;">you may proceed to vote for other position</h4>
+    <a href="president.html">president</a>
+    <a href="congress.html">congress man</a>
+    <a href="senator.html">senator</a>
+  </footer>
+</body>
+</html>
